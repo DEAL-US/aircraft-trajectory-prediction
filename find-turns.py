@@ -63,7 +63,7 @@ for nop in number_points:
     stats_df = pd.DataFrame({"accs": accs, "ids": ids})
     stats_df = stats_df.sort_values(by="accs", ascending=False)
     ids = list(stats_df.iloc[0:int(len(stats_df)/10)]["ids"])
-    turns_file = f'./data-with-extra-phases/training-data-turns/{nop}'
+    turns_file = f'./training-data/training-data-turns/{nop}'
     with open(turns_file, 'wb') as f:
         pickle.dump(ids, f)
     print("done")
