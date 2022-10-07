@@ -1,0 +1,7 @@
+test-results
+training-data*
+plots
+data-with-extra*
+.Rhistory
+__pycache__
+draw_example.py
