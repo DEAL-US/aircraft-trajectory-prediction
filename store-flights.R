@@ -8,6 +8,7 @@ phases_map <- list("Ground"=0, "Climb"=1, "Cruise"=2, "Descent"=3, "Level"=4)
 
 number_of_points <- c(5, 6, 7, 8, 9, 10)
 max_future_predictions <- 20
+timeResolution <- 30
 for (timeResMultiplier in 1:4){
     finalTimeResolution <- timeResolution * timeResMultiplier
     features <- c("latitude", "longitude", "true_track", "baro_altitude", "geo_altitude", "vertical_rate")
