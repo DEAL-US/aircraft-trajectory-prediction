@@ -153,27 +153,3 @@ for (timeResMultiplier in 1:4){
         torch_save(extras, file_extras)
     }
 }
-
-number_sv = 0
-number_vertical_rate = 0
-
-for(flight in flights){
-    svs <- flight$state_vectors$state_vectors
-    number_sv = number_sv + length(svs)
-    for(sv in svs){
-        if(!is.null(sv$vertical_rate)){
-            number_vertical_rate = number_vertical_rate + 1
-        }
-    }
-}
-print(number_sv)
-print(number_vertical_rate)
-
-times <- flights[[100]]$state_vectors$get_values("requested_time")
-altitudes <- flights[[100]]$state_vectors$get_values("geo_altitude")
-verticalRates <- flights[[100]]$state_vectors$get_values("vertical_rate")
-speeds <- flights[[100]]$state_vectors$get_values("velocity")
-
-data <- na.omit(data)
-data$index <- as.numeric(rownames(data))
-data$phase <- findFlightPhases(data$times, data$altitudes, data$verticalRates, data$speeds)
