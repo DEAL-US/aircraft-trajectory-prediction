@@ -121,9 +121,9 @@ for (timeResMultiplier in 1:4){
             ys[i] <- ys_list[[i]]
             extras[i] <- extra_list[[i]]
         }
-        folder_xs <- paste0(".training-data/training-data-", finalTimeResolution)
-        folder_ys <- paste0(".training-data/training-data-", finalTimeResolution)
-        folder_extras <- paste0(".training-data/training-data-", finalTimeResolution)
+        folder_xs <- paste0("./training-data/training-data-", finalTimeResolution)
+        folder_ys <- paste0("./training-data/training-data-", finalTimeResolution)
+        folder_extras <- paste0("./training-data/training-data-", finalTimeResolution)
         if(!dir.exists(folder_xs)){
             dir.create(folder_xs)
         }
