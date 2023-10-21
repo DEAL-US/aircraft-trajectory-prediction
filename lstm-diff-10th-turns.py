@@ -174,7 +174,7 @@ for nop in number_points:
         originals = originals[keep_positions]
 
     # Keeping only cases with turns
-    with open(f'./training-data-turns/{nop}', 'rb') as f:
+    with open(f'./training-data/training-data-turns/{nop}', 'rb') as f:
         turns_ids = set(pickle.load(f))
     keep_positions = []
     for id in ids:
